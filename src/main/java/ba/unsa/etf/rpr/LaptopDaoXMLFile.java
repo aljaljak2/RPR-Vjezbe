@@ -48,7 +48,7 @@ public class LaptopDaoXMLFile implements LaptopDao{
     }
 
     @Override
-    public ArrayList<Laptop> VratiPodatkeIzDatoteke() throws IOException, ClassNotFoundException {
+    public ArrayList<Laptop> VratiPodatkeIzDatoteke() throws IOException {
         XmlMapper xm=new XmlMapper();
         return xm.readValue(file,new TypeReference<ArrayList<Laptop>>(){});
     }

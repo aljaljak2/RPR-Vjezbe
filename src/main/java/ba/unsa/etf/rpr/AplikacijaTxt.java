@@ -29,7 +29,14 @@ public class AplikacijaTxt {
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
-
+        try {
+            System.out.println("\n--------------------------------------------------------------------------------------------");
+            sf.dodajLaptopUFile(new Laptop("HP", "Pavilion", 750, 16, 0, 1024, "AMD Ryzen 7", "Radeon graphics", 15.6));
+            ArrayList<Laptop> a=sf.VratiPodatkeIzDatoteke();
+            System.out.println(a.get(6).toString());
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 
 

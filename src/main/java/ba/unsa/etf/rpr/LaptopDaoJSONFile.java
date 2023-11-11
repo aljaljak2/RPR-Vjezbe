@@ -15,7 +15,7 @@ public class LaptopDaoJSONFile implements LaptopDao{
     ArrayList<Laptop> laptopi;
 
     public LaptopDaoJSONFile() {
-        this.file = new File("src/resources/laptopi.json");
+        this.file = new File("src/main/resources/laptopi.json");
         this.laptopi=new ArrayList<>();
     }
 
@@ -50,7 +50,7 @@ public class LaptopDaoJSONFile implements LaptopDao{
     }
 
     @Override
-    public ArrayList<Laptop> VratiPodatkeIzDatoteke() throws IOException, ClassNotFoundException {
+    public ArrayList<Laptop> VratiPodatkeIzDatoteke() throws IOException {
       ObjectMapper om=new ObjectMapper();
       return om.readValue(file, new TypeReference<ArrayList<Laptop>>(){});
     }
