@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<BorderPane minHeight="300.0" minWidth="500.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" >
+    <stylesheets>
+        <!-- Add the path to your stylesheet file here -->
+        <URL value="@style.css" />
+    </stylesheets>
+    <left>
+        <ListView fx:id="listView" maxHeight="219.0" maxWidth="226.0" minHeight="123.0" minWidth="223.0" prefHeight="123.0" prefWidth="226.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="18.0" left="10.0" right="5.0" />
+            </BorderPane.margin></ListView>
+    </left>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Ime:" />
+                <Label text="Prezime:" GridPane.rowIndex="1" />
+                <Label text="E-mail:" GridPane.rowIndex="2" />
+                <Label text="Korisničko ime:" GridPane.rowIndex="3" />
+                <Label text="Lozinka:" GridPane.rowIndex="4" />
+                <PasswordField fx:id="pswfLozinka" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="txfKorisnickoIme" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="txfEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="txfPrezime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="txfIme" prefHeight="22.0" prefWidth="166.0" GridPane.columnIndex="1" >
+                    <padding>
+                        <Insets top="5.0" />
+                    </padding></TextField>
+            </children>
+            <padding>
+                <Insets bottom="40.0" left="5.0" right="20.0" top="20.0" />
+            </padding>
+        </GridPane>
+    </center>
+    <bottom>
+        <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button fx:id="btnDodaj" defaultButton="true" mnemonicParsing="false" text="Dodaj" onAction="#NaKlik" />
+                <Button fx:id="btnKraj" cancelButton="true" mnemonicParsing="false" text="Kraj" onAction="#KrajClick" />
+            </buttons>
+            <padding>
+                <Insets right="20.0" />
+            </padding>
+        </ButtonBar>
+    </bottom>
+</BorderPane>
+
