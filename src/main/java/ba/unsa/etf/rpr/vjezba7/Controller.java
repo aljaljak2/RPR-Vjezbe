@@ -25,8 +25,8 @@ public class Controller {
         listView.setItems(model.getKorisnici());
 
         listView.getSelectionModel().selectedItemProperty().addListener((obs,oldKorisnik, newKorisnik) -> {
-            System.out.println("stari korisnik "+oldKorisnik);
-            System.out.println("novi korisnik "+newKorisnik);
+            //System.out.println("stari korisnik "+oldKorisnik);
+            //System.out.println("novi korisnik "+newKorisnik);
             model.setTrenutniKorisnik((Korisnik) newKorisnik);
             //listView.refresh();
            Korisnik stariKorisnik=(Korisnik)oldKorisnik;
